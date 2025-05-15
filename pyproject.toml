@@ -1,0 +1,32 @@
+[project]
+name = "tngpywo"
+version = "0.0.3"
+description = "TNG Python Workshop"
+authors = [
+    {name = "Valentin Zieglmeier", email = "valentin.zieglmeier@tngtech.com"},
+    {name = "Sebastian Zett", email = "sebastian.zett@tngtech.com"},
+]
+dependencies = [
+    "rise",
+    "asserts",
+    "astsearch",
+    "click",
+    "ipython",
+    "isort>=5.0.0",
+    "jupyter",
+    "jupytext",
+    "more-itertools",
+    "pyparsing",
+    "pytest>=4.3.0",
+]
+requires-python = ">=3.8"
+
+[project.scripts]
+remove_solutions = "tngpywo.internal.cli:remove_solutions"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+addopts = "--verbose --color=yes"
